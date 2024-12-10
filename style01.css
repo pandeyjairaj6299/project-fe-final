@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -24,16 +23,17 @@ body {
     border-radius: 8px;
 }
 
-
 h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #4db6ac; 
+}
 
 h2 {
     margin-top: 20px;
     color: #4db6ac; 
 }
+
 
 p {
     margin: 10px 0;
@@ -44,23 +44,22 @@ p {
 
 ul {
     margin: 10px 20px;
-    list-style: disc;
+    list-style: disc ;
     color: #b0bec5; 
 }
 
-/* Investment Option Box */
+
 .investment-option {
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #333333; /* Dark gray for cards */
-    border-left: 4px solid #4db6ac; /* Green-blue highlight */
+    background-color: #333333; 
+    border-left: 4px solid #4db6ac; 
     border-radius: 5px;
 }
 
 .investment-option strong {
     color: #4db6ac; 
 }
-
 
 .links {
     margin-top: 20px;

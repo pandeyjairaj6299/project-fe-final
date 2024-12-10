@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-color: black;
+            background-image: url('jp.img.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        .contact-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            background-color: ca detblue;
+        }
+
+        .contact-title {
+            font-size: 2rem;
+            color: aqua;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #ddd;
+        }
+
+        .input-field, .textarea-field {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .textarea-field {
+            resize: none;
+            height: 100px;
+        }
+
+        .submit-button {
+            background-color:aqua;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: aqua;
+        }
+
+        .error-message {
+            color: blue;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .contact-container {
+                padding: 20px;
+            }
+
+            .contact-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1 class="contact-title">Contact Us</h1>
+        <form onsubmit="return checkForm()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" type="text" class="input-field" placeholder="Enter your name" required />
+                <span id="name-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" class="input-field" placeholder="Enter your email" required />
+                <span id="email-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="textarea-field" placeholder="Type your message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+function checkForm() {
+    let valid = true;
+
+    const name = document.getElementById('name').value.trim();
+    const nameError = document.getElementById('name-error');
+    if (name === '') {
+        nameError.textContent = 'Name is required.';
+        valid = false;
+    } else {
+        nameError.textContent = '';
+    }
+
+    const email = document.getElementById('email').value.trim();
+    const emailError = document.getElementById('email-error');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        emailError.textContent = 'Enter a valid email address.';
+        valid = false;
+    } else {
+        emailError.textContent = '';
+    }
+
+    if (valid) {
+        alert('Form filled successfully!');
+    }
+
+    return valid;
+}
+
+    </script>
+    
+</body>
+</html>
