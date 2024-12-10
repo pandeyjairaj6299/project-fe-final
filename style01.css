@@ -1,0 +1,84 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background-color: #121212; 
+    color: #e0e0e0; 
+    line-height: 1.6;
+}
+
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+    border-radius: 8px;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4db6ac; 
+
+h2 {
+    margin-top: 20px;
+    color: #4db6ac; 
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #d3d3d3; 
+}
+
+
+ul {
+    margin: 10px 20px;
+    list-style: disc;
+    color: #b0bec5; 
+}
+
+/* Investment Option Box */
+.investment-option {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #333333; /* Dark gray for cards */
+    border-left: 4px solid #4db6ac; /* Green-blue highlight */
+    border-radius: 5px;
+}
+
+.investment-option strong {
+    color: #4db6ac; 
+}
+
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #4db6ac; 
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #b2dfdb; 
+}

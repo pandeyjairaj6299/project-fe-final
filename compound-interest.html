@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="style03.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Compound Interest Calculator</h1>
+        <form>
+            <label>Principal Amount (P):</label>
+            <input type="number" id="principal" placeholder="Enter principal"><br><br>
+            
+            <label>Rate of Interest (r%):</label>
+            <input type="number" id="rate" placeholder="Enter rate"><br><br>
+            
+            <label>Time (t in years):</label>
+            <input type="number" id="time" placeholder="Enter time"><br><br>
+
+            <label>Number of Compounds per Year (n):</label>
+            <input type="number" id="compound" placeholder="Enter n"><br><br>
+
+            <button type="button" onclick="calculateCompoundInterest()">Calculate</button>
+        </form>
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        function calculateCompoundInterest() {
+            let P = document.getElementById("principal").value;
+            let r = document.getElementById("rate").value / 100;
+            let t = document.getElementById("time").value;
+            let n = document.getElementById("compound").value;
+
+            let result = P * Math.pow((1 + r / n), n * t);
+            document.getElementById("result").innerText = "Compound Interest: " + result.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+
